@@ -38,5 +38,5 @@ COPY config /root/.cargo/config
 # RUN git config --global http.proxy "$PROXY_HTTP" \
 	# && git config --global https.proxy "$PROXY_HTTPS" \
 RUN cd /root/rCore-Tutorial-v3/os \
-	&& make run
+	&& make build
 CMD ["zsh"]
