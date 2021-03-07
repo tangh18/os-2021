@@ -42,5 +42,5 @@ RUN cd /root/rCore-Tutorial-v3/os \
 RUN  rustup target add riscv64gc-unknown-none-elf\
 	&&cargo install cargo-binutils\
 	&&rustup component add llvm-tools-preview\
-	&&rustup component add rust-src\
+	&&rustup component add rust-src
 CMD ["zsh"]
