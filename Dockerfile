@@ -39,4 +39,8 @@ COPY config /root/.cargo/config
 	# && git config --global https.proxy "$PROXY_HTTPS" \
 RUN cd /root/rCore-Tutorial-v3/os \
 	&& make build
+RUN  rustup target add riscv64gc-unknown-none-elf\
+	&&cargo install cargo-binutils\
+	&&rustup component add llvm-tools-preview\
+	&&rustup component add rust-src\
 CMD ["zsh"]
