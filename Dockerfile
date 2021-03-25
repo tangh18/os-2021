@@ -12,6 +12,8 @@ COPY ./sources.list /etc/apt/sources.list
 RUN cat /etc/apt/sources.list
 RUN rm -Rf /var/lib/apt/lists/*
 RUN apt-get update
+RUN apt install ntp
+RUN apt install net-tools
 
 RUN apt install -y zsh vim
 # RUN git config --global http.proxy "$PROXY_HTTP" \
